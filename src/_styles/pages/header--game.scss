@@ -1,0 +1,187 @@
+.header--game {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 30px 0 30px;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 150px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        width: 25%;
+        
+        &.-login {
+
+        }
+        
+        &.-profile {
+            display: none;
+        }
+    }
+    
+    &__group {
+        width: 81%;
+        background: $yellow;
+        border: 3px solid $white;
+        border-radius: 15px;
+        position: relative;
+        padding-left: 50px;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 10px;
+        height: 45px;
+    }
+
+    &__avatar {
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-family: $titleFont;
+        font-size: 18px;
+        line-height: 40px;
+        text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+        margin: 0;
+    }
+
+    &__total-score {
+        background: $darkestGray;
+        height: 25px;
+        line-height: 25px;
+        color: $white;
+        font-family: $titleFont;
+        padding: 0 30px;
+        border-radius: 5px;
+    }
+
+    &__hamburguer {
+        height: 45px;
+        display: flex;
+        width: 45px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $yellow;
+        border: 3px solid $white;
+        border-radius: 15px;
+
+        span {
+            height: 4px;
+            width: 70%;
+            background: $white;
+            margin: 2px 0;
+            border-radius: 15px;
+        }
+    }
+
+    &__icon-group {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        height: 45px;
+        width: 35%;
+        background: transparentize($black, .7);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        margin-left: 10px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: $darkestGray;
+            // border-radius: 50px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__icon-wrapper {
+        color: $white;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 10px;
+    }
+
+    &__wrapper-title {
+        margin: 0;
+        text-align: right;
+        text-transform: uppercase;
+        font-family: $titleFont;
+        font-size: 12px;
+        line-height: .7;
+    }
+
+
+    &__wrapper-number {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        font-size: 24px;
+        font-family: $titleFont;
+        
+        span {
+            display: block;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+}

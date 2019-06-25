@@ -1,0 +1,263 @@
+.juego {
+    height: 100vh;
+    background: url('/images/game-back.jpg');
+    position: relative;
+    overflow: hidden;
+
+    &__wrapper {
+        width: 250px;
+        background: $yellow;
+        border: 5px solid $white;
+        border-radius: 15px;
+        padding: 20px 10px;
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        left: 30px;
+
+        &__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            
+            img {
+                width: 100%;
+                height: 120px;
+            }
+        }
+
+        &__text {
+            text-transform: uppercase;
+            font-family: $titleFont;
+            margin: 0;
+
+            &.-red {
+                color: $red;
+                font-size: 24px;
+            }
+            
+            &.-white {
+                font-size: 20px;
+                color: $white;
+                margin-bottom: 70px;
+            }
+        }
+
+        &__group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+            width: 98%;
+            margin-left: 2%;
+            height: 45px;
+            background: $yellow - #111;
+            border-radius: 15px;
+            border: 4px solid ($yellow - #111);
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+
+            &:hover,
+            &:focus {
+                background: $green;
+                border: 4px solid ($green - #111);
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -5%;
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__name {
+            color: $white;
+            font-family: $titleFont;
+            font-size: 20px;
+        }
+    }
+
+    &__start-wrapper {
+        position: absolute;
+        width: 60%;
+        bottom: -5px;
+        left: 22%;
+        height: 75%;
+
+        display: none;
+
+        &__mike,
+        &__bily {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            
+            img {
+                height: 80%;
+                width: auto;
+            }
+        }
+
+        &__bily {
+            right: 0;
+            left: auto;
+        }
+
+        &__dialog-bubble {
+            margin: 0;
+            background: $white;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            position: absolute;
+            text-align: center;
+            font-weight: 900;
+            font-family: $altFont;
+            height: 100px;
+            padding: 0 40px;
+
+            &--first {
+                top: 0;
+                left: 200px;
+                color: $yellow;
+
+                &:after {
+                    content: url('/images/left-bubble-arrow.png');
+                    position: absolute;
+                    bottom: -20px;
+                    left: 20%;
+                }
+            }
+
+            &--second {
+                top: 120px;
+                color: $red;
+                left: 38%;
+
+                &:after {
+                    content: url('/images/right-bubble-arrow.png');
+                    position: absolute;
+                    bottom: -20px;
+                    right: 20%;
+                }
+            }
+
+            &--third {
+                top: 240px;
+                left: 32%;
+                color: $yellow;
+
+                &:after {
+                    content: url('/images/left-bubble-arrow.png');
+                    position: absolute;
+                    bottom: -20px;
+                    left: 20%;
+                }
+            }
+        }
+
+        &__button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 400px;
+            padding: 0 80px;
+            height: 60px;
+            background: $red;
+            color: $yellow;
+            font-family: $titleFont;
+            font-size: 24px;
+            line-height: 60px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 0 1px ($red - #222);
+        }
+    }
+
+    &__drag-controls {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        &__arrows,
+        &__hand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+
+    &__game-dialog {
+        font-family: $titleFont;
+        color: $white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+
+        p {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        &--correct {
+            background: $green;
+            border: 4px solid ($green - #111);
+            top: 300px;
+            left: 70%;
+            border-radius: 50px;
+            padding: 10px 40px 10px 10px;
+
+            img {
+                margin-right: 20px;
+            }
+
+            &:after {
+                content: url('/images/rayo-verde.png');
+                position: absolute;
+                bottom: -40px;
+                left: 20%;
+            }
+        }
+
+        &--wrong {
+            background: $red;
+            border: 4px solid ($red - #333);
+            top: 500px;
+            left: 60%;
+            border-radius: 50px;
+            padding: 10px 40px;
+
+            img {
+                margin-right: 20px;
+            }
+
+            &:after {
+                content: url('/images/rayo-rojo.png');
+                position: absolute;
+                bottom: -40px;
+                left: 20%;
+            }
+
+        }
+    }
+}

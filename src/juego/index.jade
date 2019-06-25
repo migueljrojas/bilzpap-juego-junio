@@ -5,4 +5,60 @@ block config
   - var baseUrl = '../';
 
 block content
-  p juego page
+    main.juego
+        .juego__wrapper
+            .juego__wrapper__background
+                img(src="/images/header-modal-3.png")
+            p.juego__wrapper__text.-red neptuno
+            p.juego__wrapper__text.-white falta que encuentres:
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-yellow.png")
+                p.juego__wrapper__name bily
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-green.png")
+                p.juego__wrapper__name maik
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-yellow.png")
+                p.juego__wrapper__name dinosaurio
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-yellow.png")
+                p.juego__wrapper__name pollito
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-yellow.png")
+                p.juego__wrapper__name unicornio
+            .juego__wrapper__group
+                .juego__wrapper__icon
+                    img(src="/images/avatar-yellow.png")
+                p.juego__wrapper__name mandrágora
+        .juego__start-wrapper
+            .juego__start-wrapper__mike
+                img(src="/images/mike.png")
+            .juego__start-wrapper__bily
+                img(src="/images/billy.png")
+            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--first ¿Dónde estás, Bily?
+            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--second 
+                |Escondido entre planetas
+                br
+                |y galaxias y tu Maik?
+            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--third 
+                |En un lugar que no
+                br
+                |me van a encontrar
+            button.juego__start-wrapper__button ¡A Jugar!
+        .juego__drag-controls
+            img.juego__drag-controls__arrows(src="/images/drag-arrows.png")
+            img.juego__drag-controls__hand(src="/images/drag-hand.png")
+
+        .juego__game-dialog.juego__game-dialog--correct
+            img(src="/images/avatar-green.png")
+            p ¡yuju! me encontraste :d
+        .juego__game-dialog.juego__game-dialog--wrong
+            p ¡ups! este no soy yo :(
+
+
+

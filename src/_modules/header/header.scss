@@ -1,6 +1,45 @@
 .header {
-
+    
     $h: &;
+
+    background: url('/images/header-back.png') no-repeat center center / cover;
+    position: relative;
+    height: 125px;
+    z-index: 2;
+    
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        height: 125px;
+        padding-top: 40px;
+    }
+    
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 160px;
+        
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-left: 20px;
+
+        a{
+            text-transform: uppercase;
+            color: $red;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
 
     &__hamburguer {
         cursor: pointer;
