@@ -9,32 +9,34 @@ block content
         .juego__wrapper
             .juego__wrapper__background
                 img(src="/images/header-modal-3.png")
-            p.juego__wrapper__text.-red neptuno
-            p.juego__wrapper__text.-white falta que encuentres:
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-yellow.png")
-                p.juego__wrapper__name bily
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-green.png")
-                p.juego__wrapper__name maik
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-yellow.png")
-                p.juego__wrapper__name dinosaurio
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-yellow.png")
-                p.juego__wrapper__name pollito
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-yellow.png")
-                p.juego__wrapper__name unicornio
-            .juego__wrapper__group
-                .juego__wrapper__icon
-                    img(src="/images/avatar-yellow.png")
-                p.juego__wrapper__name mandrágora
+            p.juego__wrapper__text.juego__wrapper__text--red neptuno
+            p.juego__wrapper__text.juego__wrapper__text--white falta que encuentres:
+            .juego__wrapper__container
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-yellow.png")
+                    p.juego__wrapper__name bily
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-green.png")
+                    p.juego__wrapper__name maik
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-yellow.png")
+                    p.juego__wrapper__name dinosaurio
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-yellow.png")
+                    p.juego__wrapper__name pollito
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-yellow.png")
+                    p.juego__wrapper__name unicornio
+                .juego__wrapper__group
+                    .juego__wrapper__icon
+                        img(src="/images/avatar-yellow.png")
+                    p.juego__wrapper__name mandrágora
+        
         .juego__start-wrapper
             .juego__start-wrapper__mike
                 img(src="/images/mike.png")
@@ -50,6 +52,7 @@ block content
                 br
                 |me van a encontrar
             button.juego__start-wrapper__button ¡A Jugar!
+
         .juego__drag-controls
             img.juego__drag-controls__arrows(src="/images/drag-arrows.png")
             img.juego__drag-controls__hand(src="/images/drag-hand.png")
@@ -57,8 +60,121 @@ block content
         .juego__game-dialog.juego__game-dialog--correct
             img(src="/images/avatar-green.png")
             p ¡yuju! me encontraste :d
+
         .juego__game-dialog.juego__game-dialog--wrong
             p ¡ups! este no soy yo :(
 
+        .juego__modal.-active
+            .juego__modal__container
 
+            .juego__modal__start-wrapper-mobile
+                .juego__modal__start-wrapper-mobile-heading
+                    img(src="/images/header-modal-1.png")
+                    h2.juego__modal__start-wrapper-mobile-title
+                        span neptuno
+                        |¡encuentra a bily y maik!
+                .juego__modal__start-wrapper-mobile-content
+                    .juego__modal__start-wrapper-mobile-dialog
+                        p.juego__modal__start-wrapper-mobile-text
+                            span.-red Bily: 
+                            |¿Dónde estás, Maik?
+                        p.juego__modal__start-wrapper-mobile-text
+                            span.-yellow Maik: 
+                            |¡Escondido entre planetas y galaxias!
+                        p.juego__modal__start-wrapper-mobile-text
+                            span.-red Bily: 
+                            |¡Yo también!
+                        p.juego__modal__start-wrapper-mobile-text
+                            span.-yellow Bily: 
+                            |¡Escondete bien antes que nos encuentren!
+                        p.juego__modal__start-wrapper-mobile-text
+                            span.-blue Ambos: 
+                            |Encuéntranos y divirtámonos juntos.
+                    button.juego__modal__start-wrapper-mobile-button ¡a jugar!
+            
+            .juego__modal__correct
+                .juego__modal__correct-background
+                    img(src="/images/header-modal-1.png")
+                    h2.juego__modal__correct-title
+                        span neptuno
+                        |¡felicitaciones!
+                .juego__modal__correct-content
+                    p.juego__modal__correct-text Encontraste a Bily y Maik y todos sus amigos en menos del tiempo esperado. Ahora, sigue divirtiéndote y buscándolos en el mundo 2.
+                    .juego__modal__correct-buttons
+                        button.juego__modal__correct-close-button X
+                        button.juego__modal__correct-next-button ¡a jugar el siguiente mundo!
 
+            .juego__modal__correct-alt
+                .juego__modal__correct-background.juego__modal__correct-background--alt
+                    img(src="/images/header-modal-2.png")
+                    h2.juego__modal__correct-title.juego__modal__correct-title--alt
+                        p.-border-text ¡felicitaciones!
+                        p.-border-text ¡que rápido nos encontraste!
+                .juego__modal__correct-content.juego__modal__correct-content--alt
+                    .juego__modal__correct-buttons
+                        button.juego__modal__correct-close-button X
+                        button.juego__modal__correct-next-button ¡a jugar el siguiente mundo!
+
+            .juego__modal__score.-active.-active
+                .juego__modal__score-background
+                    img(src="/images/header-modal-3.png")
+                    .juego__modal__score-title
+                        h2.-red ¡tu puntaje!
+                    .juego__modal__score-number
+                        span 1890
+                        img(src="/images/icon-coin.png")
+                .juego__modal__score-content
+                    p.juego__modal__score-text guarda aquí tu puntaje y estarás participando por divertidos premios.
+                    form.juego__modal__form
+                        .juego__modal__form-group
+                            label.juego__modal__label 
+                                |¿cómo te gusta que te digan?
+                                span *
+                            input.juego__modal__input
+                        .juego__modal__form-group
+                            label.juego__modal__label 
+                                |¿y tu correo es?
+                                span *
+                            input.juego__modal__input(type="email")
+                        .juego__modal__form-group
+                            label.juego__modal__label 
+                                |¿en qué ciudad vives?
+                                span *
+                            input.juego__modal__input
+                        .juego__modal__form-group
+                            label.juego__modal__label 
+                                |¡déjanos tu número!
+                                span *
+                            input.juego__modal__input(type="number")
+                        .juego__modal__avatars
+                            h3.juego__modal__avatars-title escoge tu avatar
+                            .juego__modal__avatars-container
+                                .juego__modal__avatar
+                                    img(src="/images/avatar-mono-rojo.png")
+                                .juego__modal__avatar
+                                    img(src="/images/avatar-mono-rojo.png")
+                                .juego__modal__avatar
+                                    img(src="/images/avatar-mono-rojo.png")
+                                .juego__modal__avatar
+                                    img(src="/images/avatar-mono-rojo.png")
+                                .juego__modal__avatar
+                                    img(src="/images/avatar-mono-rojo.png")
+                        p.juego__modal__comment
+                            span *
+                            |Campos Obligatorios
+                        button.juego__modal__save-button guardar
+
+            .juego__modal__wrong
+                .juego__modal__wrong-background
+                    img(src="/images/header-modal-4.png")
+                    h2.juego__modal__wrong-title.-yellow ¡Se agotó el tiempo!
+                .juego__modal__wrong-content
+                    .juego__modal__wrong-container
+                        p.juego__modal__container-title ¡No te rindas!
+                        button.juego__modal__wrong-button.juego__modal__wrong-button--retry volver a jugar
+                        p.juego__modal__container-text Encuentranos en otro mundo
+
+                    .juego__modal__wrong-container
+                        p.juego__modal__container-title graba tu participa por divertido premio
+                        button.juego__modal__wrong-button.juego__modal__wrong-button--save grabar puntaje
+                        p.juego__modal__container-text Mientras más veces participes más opciones tienes de ganar

@@ -6,17 +6,17 @@ header.header--game
         .header--game__logo-title
             img(src="/images/dia-del-nino.png")
 
-        .header--game__wrapper.-login
+        .header--game__wrapper.header--game__wrapper--login
             .header--game__group
-                .header--game__avatar
-                    img(src="/images/avatar-big.png")
+                .header--game__avatar.header--game__avatar--mono
+                    img(src="/images/avatar-mono-rojo.png")
                 p.header--game__text ¡inicia sesión!
             .header--game__hamburguer
                 span
                 span
                 span
 
-        .header--game__wrapper.-profile
+        .header--game__wrapper.header--game__wrapper--profile.-active
             .header--game__group
                 .header--game__avatar
                     img(src="/images/avatar-big.png")
@@ -26,18 +26,24 @@ header.header--game
                 span
                 span
                 span
-            .header--game__icon-group
+            .header--game__icon-group.header--game__icon-group--score
                 .header--game__icon
                     img(src="/images/icon-coin-mono.png")
                 .header--game__icon-wrapper
                     p.header--game__wrapper-title puntaje
                     span.header--game__wrapper-number 1890
-            .header--game__icon-group
+            .header--game__icon-group.header--game__icon-group--time
                 .header--game__icon
-                    img(src="/images/icon-trophy.png")
+                    img(src="/images/reloj.png")
                 .header--game__icon-wrapper
                     p.header--game__wrapper-title te quedan
                     .header--game__wrapper-number
                         span 120  
                         p s
+    .header--game__buttons
+        button.header--game__button
+            span.-horizontal
+            span.-vertical
+        button.header--game__button
+            span.-horizontal
             

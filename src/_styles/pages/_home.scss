@@ -1,6 +1,12 @@
 .home {
-    margin-top: -50px;
-    
+    overflow: hidden;
+    padding-top: 80px;
+
+    @include mq(md) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
     &__hero {
         background: url('/images/hero-back.jpg') no-repeat center center / cover;
         position: relative;
@@ -8,14 +14,24 @@
 
         &__image {
             width: 100%;
-            padding-top: 50px;
+            padding-top: 20px;
+
+            @include mq(md) {
+                padding-top: 0;
+            }
             
             img {
-                height: 70vh;
-                width: auto;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+                width: 80%;
+                height: auto;
+                
+                @include mq(md) {
+                    padding-top: 50px;
+                    width: auto;
+                    height: 70vh;
+                }
             }
         }
 
@@ -28,43 +44,82 @@
             text-align: center;
             background: $red;
             border: none;
-            width: 25%;
             max-width: 350px;
-            height: 80px;
             border-radius: 50px;
-            line-height: 80px;
-            font-size: 40px;
             text-decoration: none;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 10px 0 1px ($red - #333);
+            width: 70%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            box-shadow: 0 5px 0 1px ($red - #333);
+            
+            @include mq(md) {
+                box-shadow: 0 10px 0 1px ($red - #333);
+                line-height: 80px;
+                height: 80px;
+                width: 25%;
+                font-size: 40px;
+            }
         }
 
         &__lupa {
             position: absolute;
             top: 42%;
             right: 0;
+            width: 30%;
+
+            @include mq(md) {
+                width: auto;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         &__red-hand {
             position: absolute;
-            top: 55%;
             left: 0;
+            width: 20%;
+            top: 45%;
+
+            @include mq(md) {
+                top: 55%;
+                width: auto;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         &__scroll-arrow {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 4;
+            display: none;
+
+            @include mq(md) {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 4;
+            }
         }
 
         &__vignette {
-            position: absolute;
-            right: 50px;
-            bottom: -90px;
-            z-index: 4;
+            display: none;
+
+            @include mq(md) {
+                display: block;
+                position: absolute;
+                right: 50px;
+                bottom: -90px;
+                z-index: 4;
+            }
         }
     }
 
@@ -72,16 +127,27 @@
     &__ranking {
         position: relative;
         background: url('/images/prizes-back.png') no-repeat center top / cover;
-        margin-top: -115px;
-        padding-top: 400px;
-        padding-bottom: 300px;
         z-index: 3;
+        padding-top: 150px;
+        margin-top: -100px;
+        padding-bottom: 100px;
+
+        @include mq(md) {
+            padding-bottom: 300px;
+            margin-top: -115px;
+            padding-top: 400px;
+        }
 
         
         &__confetti-top {
-            position: absolute;
-            top: 0;
-            width: 100%;
+            display: none;
+
+            @include mq(md) {
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
 
             img {
                 width: 100%;
@@ -90,33 +156,52 @@
         }
 
         &__dia-del-nino {
-            position: absolute;
-            left: 50%;
-            top: 385px;
-            transform: translate3d(-50%, -50%, 0);
-            z-index: 4;
+            display: none;
+
+            @include mq(md) {
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 385px;
+                transform: translate3d(-50%, -50%, 0);
+                z-index: 4;
+            }
         }
 
         &__title {
             margin: 0;
             text-align: center;
             color: $red;
-            font-size: 200px;
             text-transform: uppercase;
             font-family: $titleFont;
             font-weight: 100;
+            font-size: 80px;
+
+            @include mq(md) {
+                font-size: 200px;
+            }
         }
 
         &__subtitle {
             margin: 0;
-            font-size: 50px;
             text-align: center;
-            margin-top: -40px;
             text-transform: uppercase;
             color: $white;
             font-weight: 100;
             font-family: $titleFont;
             margin-bottom: 10px;
+            font-size: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mq(md) {
+                width: auto;
+                font-size: 50px;
+                margin-top: -40px;
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
 
         &__text {
@@ -124,7 +209,12 @@
             text-align: center;
             color: $white;
             font-size: 22px;
-            font-family: $titleFont;
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                font-family: $titleFont;
+                margin-bottom: 0;
+            }
         }
 
         &__index {
@@ -145,10 +235,14 @@
         }
 
         &__table {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            display: none;
+
+            @include mq(md) {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
 
         &__table-title {
@@ -185,12 +279,15 @@
 
         &__cell {
             background: $white;
-            border-radius: 5px;
             position: relative;
+            border-radius: 0;
+            
+            @include mq(md) {
+                border-radius: 5px;
+            }
 
             &.-avatar {
                 width: 17%;
-                border-radius: 5px;
     
                 img {
                     position: absolute;
@@ -210,7 +307,11 @@
                     text-transform: uppercase;
                     color: $red;
                     margin: 0;
-                    font-size: 20px;
+                    font-size: 18px;
+
+                    @include mq(md) {
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -222,12 +323,24 @@
                 font-family: $titleFont;            
                 font-weight: 700;
                 font-size: 20px;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+
+                @include mq(md) {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                }
             }
         }
 
         &__buttons {
-            display: flex;
-            justify-content: center;
+            display: none;
+
+            @include mq(md) {
+                display: flex;
+                justify-content: center;
+            }
         }
 
         &__button {
@@ -259,13 +372,44 @@
 
     &__ranking {
         background: url('/images/red-back.png') no-repeat center top / cover;
-        margin-top: -240px;
         z-index: 2;
+        margin-top: -150px;
+        padding-bottom: 200px;
+        
+        @include mq(md) {
+            margin-top: -250px;
+            padding-bottom: 300px;
+        }
 
         &__red-hand {
-            position: absolute;
-            left: 0;
-            bottom: 50px;
+            display: none; 
+
+            @include mq(md) {
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+            }
+        }
+
+        &__cup {
+            width: 70%;
+            margin-left: auto;
+            margin-bottom: 40px;
+
+            @include mq(md) {
+                position: absolute;
+                right: 0;
+                top: 18%;
+                width: auto;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         &__title {
@@ -275,21 +419,80 @@
         &__subtitle {
             color: $yellow;
             text-transform: uppercase;
-            font-size: 90px;
+            line-height: .01;
+            margin-bottom: 40px;
+
+            @include mq(md) {
+                line-height: 1;
+                font-size: 90px;
+                margin-bottom: 0;    
+            }
+
         }
 
         &__text {
-            text-transform: uppercase;
-            font-size: 30px;
+            font-family: $mainFont;
+            font-size: 18px;
+            margin-bottom: 40px;
+            
+            @include mq(md) {
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+        }
+
+        &__search {
+            width: 100%;
+            border-radius: 50px;
+            background: rgba(0,0,0,.30);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 10px 20px;
+
+            @include mq(md) {
+                padding: 10px 40px;
+            }
+        }
+
+        &__input {
+            background: transparent;
+            border: none;
+            outline: none;
+            height: 100%;
+            color: $white;
+            font-family: $titleFont;
+            font-size: 18px;
+
+            @include mq(md) {
+                font-size: 24px;
+            }
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+
+        &__search-button {
+            background: none;
+            border: none;
+            outline: none;
         }
 
         &__table {
             margin-bottom: 40px;
+            display: block;
         }
 
         &__table-heading {
-            display: flex;
-            justify-content: space-between;
+            display: none;
+
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
         &__heading-title {
@@ -327,44 +530,83 @@
                 color: $red;
                 font-family: $titleFont;
                 text-align: center;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+
+                @include mq(md) {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
             }
 
             &.-avatar {
-                width: 10%;
+                width: 12%;
+
+                @include mq(md) {
+                    width: 10%;
+                }
             }
 
             &.-name {
-                width: 70%;
+                width: 60%;
+
+                @include mq(md) {
+                    width: 70%;
+                }
             }
 
             &.-score {
-                width: 10%;
+                width: 20%;        
+
+                @include mq(md) {
+                    width: 10%;
+                }
             }
         }
     }
 
     &__comercial {
         background: url('/images/blue-back.png') no-repeat center top / cover;
-        padding-top: 420px;
-        margin-top: -320px;
-        padding-bottom: 450px;
+        margin-top: -420px;
         position: relative;
+        padding-top: 350px;
+        padding-bottom: 250px;
+        
+        @include mq(md) {
+            padding-bottom: 450px;
+            padding-top: 420px;
+        }
 
         &__mono-bottom {
-            position: absolute;
-            bottom: -80px;
-            left: 15%;
+            display: none;
+
+            @include mq(md) {
+                position: absolute;
+                height: 25%;
+                bottom: -20px;
+                left: 20%;
+                display: block;
+            }
+
+            img {
+                height: 100%;
+                width: auto;
+            }
         }
 
         &__title {
             margin: 0;
             color: $white;
-            font-size: 90px;
             font-family: $titleFont;
             font-weight: 100;
             text-align: center;
             line-height: .8;
             margin-bottom: 40px;
+            font-size: 30px;
+
+            @include mq(md) {
+                font-size: 90px;
+            }
 
             span {
                 color: $red;
@@ -376,9 +618,15 @@
             height: 0;
             padding-bottom: 56.5%;
             overflow: hidden;
-            border: 10px solid $white;
-            border-radius: 60px;
-            box-shadow: 0 50px 0 10px rgba(0,0,0,.15);
+            border: 5px solid $white;
+            border-radius: 50px;
+            box-shadow: 0 10px 0 5px rgba(0,0,0,.15);
+            
+            @include mq(md) {
+                box-shadow: 0 50px 0 10px rgba(0,0,0,.15);
+                border: 10px solid $white;
+                border-radius: 60px;
+            }
 
             iframe {
                 position: absolute;
@@ -388,8 +636,12 @@
         }
         
         &__play-button {
-            margin-top: -45px;
-            height: 80px;
+            margin-top: -32px;
+            height: 60px;
+                        
+            @include mq(md) {
+                height: 80px;
+            }
 
             img {
                 height: 100%;
