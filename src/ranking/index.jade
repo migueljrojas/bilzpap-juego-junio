@@ -2,7 +2,121 @@ extends ../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
+  - var baseUrl = '../';
 
 block content
-  p ranking page
+  main.ranking
+    .ranking__red-hand.wow.fadeInLeft
+        img(src="/images/left-hand-thumbs-up.png")
+    .ranking__cup.wow.fadeInRight
+        img(src="/images/right-hand-cup.png")
+    .container
+        .row
+            .col-24
+                h2.ranking__title ranking
+                h3.ranking__subtitle mes del niño
+                p.ranking__text ¡Ellos ya están participando!
+            .col-24.col-md-18.offset-md-3
+                .ranking__search
+                    input.ranking__input(placeholder="¿en qué puesto estoy?")
+                    button.ranking__search-button
+                        img(src="/images/lupa.png")
+                .ranking__table
+                    .ranking__table-heading
+                        p.ranking__heading-title.-index puesto
+                        p.ranking__heading-title.-avatar avatar
+                        p.ranking__heading-title.-name alias
+                        p.ranking__heading-title.-score puntos
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-first-index.-index 1
+                        .ranking__cell.-first-index.-avatar
+                            img(src="/images/avatar-1.png")
+                        .ranking__cell.-first-index.-name
+                            p nombre del usuario
+                        .ranking__cell.-first-index.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 2
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 3
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 4
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 5
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 6
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 7
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 8
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 9
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+                    .ranking__table-group.wow.fadeInLeft
+                        span.ranking__cell.-index 10
+                        .ranking__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .ranking__cell.-name
+                            p nombre del usuario
+                        .ranking__cell.-score
+                            span 1500
+            .col-24
+                .ranking__pagination
+                  button.ranking__pagination__prev
+                    i.material-icons keyboard_arrow_left
+                  .ranking__pagination__index
+                    span 1
+                    | /  
+                    span 14
+                  button.ranking__pagination__next
+                    i.material-icons keyboard_arrow_right
+
+    .ranking__yellow-footer
+

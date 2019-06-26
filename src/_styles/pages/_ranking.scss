@@ -1,0 +1,439 @@
+.ranking {
+  padding-top: 150px;  
+  background: $red url('/images/red-back.png') no-repeat center top / cover;
+  z-index: 2;
+  margin-top: -150px;
+  position: relative;
+
+  @include mq(md) {
+      margin-top: -115px;
+      padding-top: 200px;
+  }
+
+  
+  &__yellow-footer {
+    height: 0;
+    width: 100%;
+    padding-bottom: 20%;
+    background: url('/images/yellow-footer.png') no-repeat top center / cover;
+    position: relative;
+    z-index: 2;
+    margin-top: 10%;
+  }
+
+  &__title {
+      margin: 0;
+      text-align: center;
+      color: $red;
+      text-transform: uppercase;
+      font-family: $titleFont;
+      font-weight: 100;
+      font-size: 80px;
+
+      @include mq(md) {
+          font-size: 200px;
+      }
+  }
+
+  &__subtitle {
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 100;
+      font-family: $titleFont;
+      margin-bottom: 10px;
+      font-size: 30px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mq(md) {
+          width: auto;
+          font-size: 50px;
+          margin-top: -40px;
+          margin-left: 0;
+          margin-right: 0;
+      }
+  }
+
+  &__text {
+      margin: 0;
+      text-align: center;
+      color: $white;
+      font-size: 22px;
+      margin-bottom: 20px;
+
+      @include mq(md) {
+          font-family: $titleFont;
+          margin-bottom: 0;
+      }
+  }
+
+  &__index {
+      width: 100%;
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 90%; 
+
+      img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          max-width: 90%;
+          max-height: 90%;
+      }
+  }
+
+  &__table {
+      display: none;
+
+      @include mq(md) {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+  }
+
+  &__table-title {
+      text-transform: uppercase;
+      font-size: 45px;
+      text-align: center;
+      font-family: $titleFont;
+      font-weight: 100;
+      margin: 0;
+      margin-bottom: 20px;
+
+      &.-white {
+          color: $white;
+      }
+
+      &.-blue {
+          color: $blue;
+      }
+
+      &.-orange {
+          color: $orange;
+      }
+  }
+
+  &__table-group {
+      display: flex;
+      justify-content: space-between;
+      height: 60px;
+
+      &:not(:last-child) {
+          margin-bottom: 10px;
+      }
+  }
+
+  &__cell {
+      background: $white;
+      position: relative;
+      border-radius: 0;
+      
+      @include mq(md) {
+          border-radius: 5px;
+      }
+
+      &.-avatar {
+          width: 17%;
+
+          img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate3d(-50%, -50%, 0);
+          }
+      }
+
+      &.-name {
+          width: 65%;
+          padding-left: 20px;
+          
+          p {
+              line-height: 60px;
+              font-family: $titleFont;            
+              text-transform: uppercase;
+              color: $red;
+              margin: 0;
+              font-size: 18px;
+
+              @include mq(md) {
+                  font-size: 20px;
+              }
+          }
+      }
+
+      &.-score {
+          width: 15%;
+          line-height: 60px;
+          color: $red;
+          text-align: center;
+          font-family: $titleFont;            
+          font-weight: 700;
+          font-size: 20px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+
+          @include mq(md) {
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+
+          }
+      }
+  }
+
+  &__buttons {
+      display: none;
+
+      @include mq(md) {
+          display: flex;
+          justify-content: center;
+      }
+  }
+
+  &__button {
+      width: 22%;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $titleFont;            
+      text-decoration: none;
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
+      border: none;
+      border-radius: 50px;
+      margin: 0 10px;
+
+      &.-red {
+          background: $red;
+          color: $yellow;
+          box-shadow: 0 5px 0 1px ($red - #333);
+      }
+
+      &.-yellow {
+          background: $yellow;
+          color: $red;
+          box-shadow: 0 5px 0 1px ($yellow - #333);
+      }
+  }
+
+  &__red-hand {
+      display: none; 
+
+      @include mq(md) {
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 8%;
+      }
+  }
+
+  &__pagination {
+    color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__prev,
+    &__next {
+      background: none;
+      width: 32px;
+      height: 32px;
+      margin: 0 10px;
+      color: $yellow;
+      border:none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__index {
+      font-family: $titleFont;
+      font-weight: normal;
+      color: $yellow;
+
+      span {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &__cup {
+      width: 70%;
+      margin-left: auto;
+      margin-bottom: 40px;
+      margin-top: 110px;
+
+      @include mq(md) {
+          position: absolute;
+          right: 0;
+          top: 18%;
+          width: auto;
+          margin-left: 0;
+          margin-bottom: 0;
+          margin-top: 0;
+      }
+
+      img {
+          width: 100%;
+          height: auto;
+      }
+  }
+
+  &__title {
+      color: $yellow;
+  }
+
+  &__subtitle {
+      color: $yellow;
+      text-transform: uppercase;
+      line-height: .01;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+          line-height: 1;
+          font-size: 90px;
+          margin-bottom: 0;    
+      }
+
+  }
+
+  &__text {
+      font-family: $titleFont;
+      font-size: 18px;
+      margin-bottom: 40px;
+      
+      @include mq(md) {
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-size: 30px;
+      }
+  }
+
+  &__search {
+      width: 100%;
+      border-radius: 50px;
+      background: rgba(0,0,0,.30);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding: 10px 20px;
+
+      @include mq(md) {
+          padding: 10px 40px;
+      }
+  }
+
+  &__input {
+      background: transparent;
+      border: none;
+      outline: none;
+      height: 100%;
+      color: $white;
+      font-family: $titleFont;
+      font-size: 18px;
+
+      @include mq(md) {
+          font-size: 24px;
+      }
+
+      &::placeholder {
+          color: $white;
+      }
+  }
+
+  &__search-button {
+      background: none;
+      border: none;
+      outline: none;
+  }
+
+  &__table {
+      margin-bottom: 40px;
+      display: block;
+  }
+
+  &__table-heading {
+      display: none;
+
+      @include mq(md) {
+          display: flex;
+          justify-content: space-between;
+      }
+  }
+
+  &__heading-title {
+      text-align: center;
+      color: $white;
+      font-family: $titleFont;
+
+      &.-index {
+          width: 8%;
+      }
+
+      &.-avatar {
+          width: 10%;
+      }
+
+      &.-name {
+          width: 70%;
+      }
+
+      &.-score {
+          width: 10%;
+      }
+  }
+
+  &__cell {
+      background: $yellow;
+
+      &.-first-index{
+          background: $white;
+      }
+
+      &.-index {
+          width: 8%;
+          line-height: 60px;
+          color: $red;
+          font-family: $titleFont;
+          text-align: center;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+
+          @include mq(md) {
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+          }
+      }
+
+      &.-avatar {
+          width: 12%;
+
+          @include mq(md) {
+              width: 10%;
+          }
+      }
+
+      &.-name {
+          width: 60%;
+
+          @include mq(md) {
+              width: 70%;
+          }
+      }
+
+      &.-score {
+          width: 20%;        
+
+          @include mq(md) {
+              width: 10%;
+          }
+      }
+  }
+}
