@@ -173,6 +173,7 @@
         width: 35px;
         border-radius: 5px;
         order: 4;
+        cursor: pointer;
 
         @include mq(md) {
             border-radius: 15px;

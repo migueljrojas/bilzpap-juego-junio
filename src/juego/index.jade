@@ -5,54 +5,47 @@ block config
   - var baseUrl = '../';
 
 block content
+    .juego__blocked
+        .juego__blocked__warn
+            i.fa.fa-undo
+            p Este juego está hecho para ser usado en modo horizonal, gira tu teléfono
+    
     main.juego
-        .juego__wrapper
-            .juego__wrapper__background
-                img(src="/images/header-modal-3.png")
-            p.juego__wrapper__text.juego__wrapper__text--red neptuno
-            p.juego__wrapper__text.juego__wrapper__text--white falta que encuentres:
-            .juego__wrapper__container
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+        .juego__sidebar.-active
+            .juego__sidebar__close +
+            .juego__sidebar__background
+                img(src="/images/header-sidebar.png")
+            p.juego__sidebar__text.juego__sidebar__text--red neptuno
+            p.juego__sidebar__text.juego__sidebar__text--white falta que encuentres:
+            .juego__sidebar__container
+                .juego__sidebar__group
+                    .juego__sidebar__icon
                         img(src="/images/avatar-yellow.png")
-                    p.juego__wrapper__name bily
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+                    p.juego__sidebar__name bily
+                .juego__sidebar__group.-active
+                    .juego__sidebar__icon
                         img(src="/images/avatar-green.png")
-                    p.juego__wrapper__name maik
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+                    p.juego__sidebar__name maik
+                .juego__sidebar__group
+                    .juego__sidebar__icon
                         img(src="/images/avatar-yellow.png")
-                    p.juego__wrapper__name dinosaurio
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+                    p.juego__sidebar__name dinosaurio
+                .juego__sidebar__group
+                    .juego__sidebar__icon
                         img(src="/images/avatar-yellow.png")
-                    p.juego__wrapper__name pollito
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+                    p.juego__sidebar__name pollito
+                .juego__sidebar__group
+                    .juego__sidebar__icon
                         img(src="/images/avatar-yellow.png")
-                    p.juego__wrapper__name unicornio
-                .juego__wrapper__group
-                    .juego__wrapper__icon
+                    p.juego__sidebar__name unicornio
+                .juego__sidebar__group
+                    .juego__sidebar__icon
                         img(src="/images/avatar-yellow.png")
-                    p.juego__wrapper__name mandrágora
+                    p.juego__sidebar__name mandrágora
         
-        .juego__start-wrapper
-            .juego__start-wrapper__mike
-                img(src="/images/mike.png")
-            .juego__start-wrapper__bily
-                img(src="/images/billy.png")
-            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--first ¿Dónde estás, Bily?
-            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--second 
-                |Escondido entre planetas
-                br
-                |y galaxias y tu Maik?
-            p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--third 
-                |En un lugar que no
-                br
-                |me van a encontrar
-            button.juego__start-wrapper__button ¡A Jugar!
-
+        .juego__sidebar__open
+            img(src="/images/boton-desafios.png")
+        
         .juego__drag-controls
             img.juego__drag-controls__arrows(src="/images/drag-arrows.png")
             img.juego__drag-controls__hand(src="/images/drag-hand.png")
@@ -65,7 +58,23 @@ block content
             p ¡ups! este no soy yo :(
 
         .juego__modal.-active
-            .juego__modal__container
+            .juego__modal__container(data-modal="close")
+
+            .juego__start-wrapper
+                .juego__start-wrapper__mike.wow.fadeInLeft
+                    img(src="/images/mike.png")
+                .juego__start-wrapper__bily.wow.fadeInRight
+                    img(src="/images/billy.png")
+                p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--first.wow.fadeInLeft(data-wow-delay=".5s") ¿Dónde estás, Bily?
+                p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--second.wow.fadeInRight(data-wow-delay="1s") 
+                    |Escondido entre planetas
+                    br
+                    |y galaxias y tu Maik?
+                p.juego__start-wrapper__dialog-bubble.juego__start-wrapper__dialog-bubble--third.wow.fadeInLeft(data-wow-delay="1.5s") 
+                    |En un lugar que no
+                    br
+                    |me van a encontrar
+                button.juego__start-wrapper__button.wow.fadeInUpBig(data-modal="close" data-wow-delay="2s") ¡A Jugar!
 
             .juego__modal__start-wrapper-mobile
                 .juego__modal__start-wrapper-mobile-heading
@@ -90,7 +99,7 @@ block content
                         p.juego__modal__start-wrapper-mobile-text
                             span.-blue Ambos: 
                             |Encuéntranos y divirtámonos juntos.
-                    button.juego__modal__start-wrapper-mobile-button ¡a jugar!
+                    button.juego__modal__start-wrapper-mobile-button(data-modal="close") ¡a jugar!
             
             .juego__modal__correct
                 .juego__modal__correct-background
@@ -115,7 +124,7 @@ block content
                         button.juego__modal__correct-close-button X
                         button.juego__modal__correct-next-button ¡a jugar el siguiente mundo!
 
-            .juego__modal__score.-active.-active
+            .juego__modal__score
                 .juego__modal__score-background
                     img(src="/images/header-modal-3.png")
                     .juego__modal__score-title

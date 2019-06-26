@@ -4,7 +4,7 @@
     position: relative;
     overflow: hidden;
 
-    &__wrapper {
+    &__sidebar {
         @include trans;
 
         position: absolute;
@@ -21,8 +21,7 @@
             transform: translateX(0);
         }
 
-        &:after {
-            content: '+';
+        &__close {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -37,6 +36,17 @@
             color: $yellow;
             border-radius: 50px;
             font-size: 28px;
+
+            @include mq(md) {
+                display: none;
+            }
+        }
+
+        &__open {
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            left: 20px;
 
             @include mq(md) {
                 display: none;
@@ -58,6 +68,11 @@
             position: relative;
             overflow: auto;
             height: 65%;
+
+            @include mq(md) {
+                height: auto;
+                overflow: visible;
+            }
         }
 
         &__background {
@@ -106,10 +121,13 @@
                 margin-bottom: 10px;
             }
 
-            &:hover,
-            &:focus {
+            &.-active {
                 background: $green;
-                border: 4px solid ($green - #111);
+                border: 4px solid darken($green, 10%);
+
+                .juego__wrapper__icon {
+                    border: 3px solid darken($green, 10%);
+                }
             }
         }
 
@@ -120,10 +138,17 @@
             left: -5%;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid darken($yellow, 10%);
 
             img {
-                width: 100%;
-                height: 100%;
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
 
@@ -141,9 +166,12 @@
         left: 22%;
         height: 75%;
         opacity: 0;
+        pointer-events: none;
+        z-index: 3000;
 
         &.-active {
             opacity: 1;
+            pointer-events: all;
         }
 
         &__mike,
@@ -223,8 +251,9 @@
 
         &__button {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            right: 0;
+            margin: auto;
             top: 400px;
             padding: 0 80px;
             height: 60px;
@@ -236,6 +265,7 @@
             border: none;
             border-radius: 50px;
             box-shadow: 0 10px 0 1px ($red - #222);
+            width: 300px;
         }
     }
 
@@ -330,13 +360,16 @@
     }
 
     &__modal {
-        opacity: 0;
-        z-index: -1;
-        overflow: hidden;
+        display: none;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index: 10000;
 
         &.-active {
-            opacity: 1;
-            z-index: 1000;
+            display: block;
         }
 
         &__container {
@@ -349,7 +382,6 @@
             opacity: 0;
             opacity: .5;
             z-index: 3000;
-
         }
 
         &__start-wrapper-mobile {
@@ -364,15 +396,16 @@
             background: $white;
             z-index: 3000;
             opacity: 0;
+            pointer-events: none;
 
             &.-active {
                 opacity: 1;
+                pointer-events: all;
             }
     
             @include mq(md) {
                 display: none;
             }
-    
         }
 
         &__start-wrapper-mobile-heading {
@@ -464,6 +497,7 @@
             height: 98vh;
             width: 80%;
             z-index: -1;
+            pointer-events: none;
             
             @include mq(md) {
                 height: 33.3vw;
@@ -473,6 +507,7 @@
             &.-active {
                 opacity: 1;
                 z-index: 4000;
+                pointer-events: all;
             }
         }
 
@@ -607,6 +642,7 @@
             left: 50%;
             height: 98vh;
             width: 80%;
+            pointer-events: none;
             
             @include mq(md) {
                 width: 50%;
@@ -615,6 +651,7 @@
             
             &.-active {
                 opacity: 1;
+                pointer-events: all;
             }
         }
 
@@ -889,4 +926,61 @@
             }
         }
     }
+
+    &__blocked {
+        position: fixed;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        background: #faab00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        
+        &__warn {
+            text-align: center;
+            background: $red;
+            color: $white;
+            font-family: $titleFont;
+            padding: 30px;
+            width: 90%;
+            font-size: 18px;
+            font-weight: 100;
+            border-radius: 10px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 0;
+                padding-bottom: 18%;
+                bottom: 90%;
+                content: '';
+                z-index: 0;
+                background: url('/images/header-modal-1.png') no-repeat top center / cover;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            i {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: $yellow;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .juego__blocked { display: flex; }
+    .juego { display: none; }
+}
+@media (orientation: landscape) {
+    .juego__blocked { display: none; }
+    .juego { display: block; }
 }

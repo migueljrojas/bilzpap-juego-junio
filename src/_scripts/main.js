@@ -7,9 +7,10 @@ global.$ = global.jQuery;
 //global._ = require('underscore');
 
 var Header = require('../_modules/header/header');
-var Slider = require('../_modules/slider/slider');
+var Game = require('./juego');
 
 $(function() {
 
     new Header();
+    new Game();
 });
