@@ -9,15 +9,17 @@ block content
     .container
         .row
             .col-24
-                h2.premios__title.wow.fadeInUp premios
-                h3.premios__subtitle.wow.fadeInUp ¡gana premios todos los días!
+                h2.premios__title.wow.fadeInUp Ganadores
+                h3.premios__subtitle.wow.fadeInUp del mes del niño
                 p.premios__text.wow.fadeInUp En el Mes del Niño un premio distinto cada día para que te diviertas junto a tu familia
+        .row
             .col-24.col-md-12
                 .premios__index.wow.fadeInLeft
                     img(src="/images/premio-1.png")
             .col-24.col-md-12
                 .premios__table.wow.fadeInRight
-                    h3.premios__table-title.-white ganadores diarios
+                    h6.premios__table-supertitle Primer Premio
+                    h3.premios__table-title.-red Ganadores del día
                     .premios__table-group
                         .premios__cell.-avatar
                             img(src="/images/avatar-1.png")
@@ -46,9 +48,14 @@ block content
                             p nombre del usuario
                         .premios__cell.-score
                             span 1500
+        .row    
+            .col-24.col-md-12.pull-right
+                .premios__index.wow.fadeInRight
+                    img(src="/images/premio-2.png")            
             .col-24.col-md-12
                 .premios__table.wow.fadeInLeft
-                    h3.premios__table-title.-blue ganadores diarios
+                    h6.premios__table-supertitle Segundo Premio
+                    h3.premios__table-title.-blue Ganadores del día
                     .premios__table-group
                         .premios__cell.-avatar
                             img(src="/images/avatar-1.png")
@@ -77,15 +84,14 @@ block content
                             p nombre del usuario
                         .premios__cell.-score
                             span 1500
-            .col-24.col-md-12
-                .premios__index.wow.fadeInRight
-                    img(src="/images/premio-2.png")
+        .row    
             .col-24.col-md-12
                 .premios__index.wow.fadeInLeft
                     img(src="/images/premio-3.png")
             .col-24.col-md-12
                 .premios__table.wow.fadeInRight
-                    h3.premios__table-title.-orange ganadores diarios
+                    h6.premios__table-supertitle Tercer Premio
+                    h3.premios__table-title.-orange Ganadores del día
                     .premios__table-group
                         .premios__cell.-avatar
                             img(src="/images/avatar-1.png")
@@ -114,7 +120,5 @@ block content
                             p nombre del usuario
                         .premios__cell.-score
                             span 1500
-            .col-24
-                .premios__buttons.wow.fadeInUp
-                    a.premios__button.-red(href="#") bases legales
-                    a.premios__button.-yellow(href="/ganadores") todos los ganadores
+    
+    .ranking__yellow-footer
