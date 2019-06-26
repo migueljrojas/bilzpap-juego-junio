@@ -2,7 +2,119 @@ extends ../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
+  - var baseUrl = '../';
 
 block content
-  p ganadores page
+  main.premios
+    .container
+        .row
+            .col-24
+                h2.premios__title.wow.fadeInUp premios
+                h3.premios__subtitle.wow.fadeInUp ¡gana premios todos los días!
+                p.premios__text.wow.fadeInUp En el Mes del Niño un premio distinto cada día para que te diviertas junto a tu familia
+            .col-24.col-md-12
+                .premios__index.wow.fadeInLeft
+                    img(src="/images/premio-1.png")
+            .col-24.col-md-12
+                .premios__table.wow.fadeInRight
+                    h3.premios__table-title.-white ganadores diarios
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+            .col-24.col-md-12
+                .premios__table.wow.fadeInLeft
+                    h3.premios__table-title.-blue ganadores diarios
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+            .col-24.col-md-12
+                .premios__index.wow.fadeInRight
+                    img(src="/images/premio-2.png")
+            .col-24.col-md-12
+                .premios__index.wow.fadeInLeft
+                    img(src="/images/premio-3.png")
+            .col-24.col-md-12
+                .premios__table.wow.fadeInRight
+                    h3.premios__table-title.-orange ganadores diarios
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-1.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+                    .premios__table-group
+                        .premios__cell.-avatar
+                            img(src="/images/avatar-2.png")
+                        .premios__cell.-name
+                            p nombre del usuario
+                        .premios__cell.-score
+                            span 1500
+            .col-24
+                .premios__buttons.wow.fadeInUp
+                    a.premios__button.-red(href="#") bases legales
+                    a.premios__button.-yellow(href="/ganadores") todos los ganadores
