@@ -213,6 +213,10 @@
 
         &:last-child {
             margin-right: 30px;
+            
+            @include mq(md) {
+                margin-right: 0;
+            }
         }
         
         @include mq(md) {
@@ -305,7 +309,7 @@
         text-align: right;
         font-family: $titleFont;
         font-size: 20px;
-                
+
         @include mq(md) {
             font-size: 24px;
         }
