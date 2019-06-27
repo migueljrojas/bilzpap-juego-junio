@@ -980,6 +980,7 @@
     .juego__blocked { display: flex; }
     .juego { display: none; }
 }
+
 @media (orientation: landscape) {
     .juego__blocked { display: none; }
     .juego { display: block; }

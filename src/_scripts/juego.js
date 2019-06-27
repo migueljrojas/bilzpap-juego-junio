@@ -48,6 +48,12 @@ var Game = function() {
   sideBarClose.on('click', function() {
     sidebar.removeClass('-active');
   });
+
+  var perfilPage = $('.perfil').length > 0;
+
+  if (perfilPage) {
+    $('.header--game').addClass('-perfil');
+  }
 }
 
 module.exports = Game;

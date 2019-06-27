@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 1000;
     padding: 10px 10px 0 10px;
-    background: $orange;
+    background: #faab00;
     
     @include mq(md) {
         position: absolute;
@@ -362,6 +362,13 @@
                 width: 2px;
                 background: $red;
             }
+        }
+    }
+
+    &.-perfil {
+        .header--game__icon-group--score,
+        .header--game__icon-group--time {
+            display: none;
         }
     }
 }

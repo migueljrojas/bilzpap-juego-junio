@@ -1,6 +1,7 @@
 .perfil {
+
     &__hero {
-        background: url('/images/header-modal-3.png') no-repeat center bottom / cover;
+        background: url('/images/profile-header.png') no-repeat center bottom / cover;
         // height: 60vh;
         padding-top: 100px;
         padding-bottom: 100px;
@@ -107,12 +108,13 @@
         background: $red;
         // background: url('/images/red-back.png') no-repeat center bottom / cover;
         padding-bottom: 100px;
-        min-height: 363vh;
-        padding-top: 20px;
+        padding-top: 70px;
+        margin-top: -50px;
 
         @include mq(md) {
-            padding-top: 50px;
+            padding-top: 150px;
             min-height: 0;
+            margin-top: -100px;
         }
 
         &__table {
@@ -260,13 +262,19 @@
 
         &__container {
             width: 100%;
-            
+            position: sticky;
+            top: 38%;
         }
 
         &__message-image {
             position: relative;
             width: 100%;
             height: 1px;
+            display: none;
+
+            @include mq(md) {
+                display: block;
+            }
 
             img {
                 position: absolute;
@@ -303,18 +311,82 @@
         }
 
         &__button {
-            color: $yellow;
             font-family: $titleFont;
             font-size: 24px;
-            background: $red;
             border-radius: 50px;
-            box-shadow: 0 3px 0 1px ($red - #333);
             padding: 10px 0;
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
             text-align: center;
+            color: $red;
+            background: $yellow;
+            box-shadow: 0 3px 0 1px ($yellow - #333);
+        
+            @include mq(md) {
+                color: $yellow;
+                background: $red;
+                box-shadow: 0 3px 0 1px ($red - #333);
+                
+            }
         }
     }
+
+    &__blocked {
+        position: fixed;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        background: #faab00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        
+        &__warn {
+            text-align: center;
+            background: $red;
+            color: $white;
+            font-family: $titleFont;
+            padding: 30px;
+            width: 90%;
+            font-size: 18px;
+            font-weight: 100;
+            border-radius: 10px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 0;
+                padding-bottom: 18%;
+                bottom: 90%;
+                content: '';
+                z-index: 0;
+                background: url('/images/header-modal-1.png') no-repeat top center / cover;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            i {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: $yellow;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .perfil__blocked { display: flex; }
+    .perfil { display: none; }
+}
+@media (orientation: landscape) {
+    .perfil__blocked { display: none; }
+    .perfil { display: block; }
 }
