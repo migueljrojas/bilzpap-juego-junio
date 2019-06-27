@@ -4,9 +4,12 @@
     width: 100%;
     z-index: 1000;
     padding: 10px 10px 0 10px;
+    background: $orange;
     
     @include mq(md) {
+        position: absolute;
         padding: 30px 30px 0 30px;
+        background: transparent;
     }
 
     &__container {
@@ -228,6 +231,7 @@
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
         }
 
         &--score {
@@ -252,13 +256,13 @@
         z-index: 2;
         top: 50%;
         transform: translateY(-50%);
-        left: 0;
-        height: 40px;
-        width: 40px;
+        left: -8px;
+        height: 43px;
+        width: 43px;
     
         @include mq(md) {
-            height: 50px;
-            width: 50px;
+            height: 54px;
+            width: 54px;
         }
 
         img {
@@ -273,7 +277,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 10px;
+        padding-right: 5px;
+        
+        @include mq(md) {
+            padding-right: 10px;
+        }
     }
 
     &__wrapper-title {
@@ -283,6 +291,10 @@
         font-family: $titleFont;
         font-size: 12px;
         line-height: .7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
     }
 
 
@@ -291,8 +303,12 @@
         justify-content: flex-end;
         align-items: flex-end;
         text-align: right;
-        font-size: 24px;
         font-family: $titleFont;
+        font-size: 20px;
+                
+        @include mq(md) {
+            font-size: 24px;
+        }
         
         span {
             display: block;
