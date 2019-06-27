@@ -14,10 +14,12 @@
 
         &__image {
             width: 100%;
-            padding-top: 20px;
+            padding-top: 60px;
+            margin-top: -40px;
 
             @include mq(md) {
                 padding-top: 0;
+                margin-top: 0;
             }
             
             img {
@@ -101,6 +103,7 @@
             display: none;
 
             @include mq(md) {
+                animation:bounce 0.6s $easing infinite;
                 display: block;
                 position: absolute;
                 bottom: 0;
@@ -128,8 +131,8 @@
         position: relative;
         background: url('/images/prizes-back.png') no-repeat center top / cover;
         z-index: 3;
-        padding-top: 150px;
-        margin-top: -100px;
+        padding-top: 100px;
+        margin-top: -135px;
         padding-bottom: 100px;
 
         @include mq(md) {
@@ -654,4 +657,14 @@
             }
         }
     }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(-50%);
+    } 
+
+    50% {
+        transform: translate3d(-50%, 10px, 0);
+    } 
 }

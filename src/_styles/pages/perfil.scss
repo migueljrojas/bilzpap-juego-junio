@@ -332,60 +332,137 @@
         }
     }
 
-    &__blocked {
-        position: fixed;
-        top: 0;
-        left:0;
-        bottom: 0;
-        right: 0;
-        background: #faab00;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
+    // &__blocked {
+    //     position: fixed;
+    //     top: 0;
+    //     left:0;
+    //     bottom: 0;
+    //     right: 0;
+    //     background: #faab00;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     z-index: 10000;
         
-        &__warn {
-            text-align: center;
-            background: $red;
-            color: $white;
-            font-family: $titleFont;
-            padding: 30px;
-            width: 90%;
+    //     &__warn {
+    //         text-align: center;
+    //         background: $red;
+    //         color: $white;
+    //         font-family: $titleFont;
+    //         padding: 30px;
+    //         width: 90%;
+    //         font-size: 18px;
+    //         font-weight: 100;
+    //         border-radius: 10px;
+    //         position: relative;
+
+    //         &:before {
+    //             position: absolute;
+    //             left: 0;
+    //             right: 0;
+    //             height: 0;
+    //             padding-bottom: 18%;
+    //             bottom: 90%;
+    //             content: '';
+    //             z-index: 0;
+    //             background: url('/images/header-modal-1.png') no-repeat top center / cover;
+    //         }
+
+    //         p {
+    //             margin: 0;
+    //         }
+
+    //         i {
+    //             font-size: 28px;
+    //             margin-bottom: 15px;
+    //             color: $yellow;
+    //         }
+    //     }
+    // }
+}
+
+@media (orientation: portrait) {
+    // .perfil__blocked { display: flex; }
+    // .perfil { display: none; }
+    .perfil__hero {
+        @include mq(xs) {
+            padding-top: 50px;
+            margin-top: -20px;
+        }
+    }
+    
+    .perfil__hero__container {
+        @include mq(xs) {
+            display: block;
+            height: auto;
+            padding: 20px 0;
+        }
+    }
+
+    .perfil__hero__wrapper {
+        @include mq(xs) {
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .perfil__hero__avatar {
+        @include mq(xs) {
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    .perfil__hero__group {
+        @include mq(xs) {
+            margin-left: 20px;
+        }
+    }
+
+    .perfil__hero__title {
+        @include mq(xs) {
             font-size: 18px;
-            font-weight: 100;
-            border-radius: 10px;
-            position: relative;
+        }
+    }
 
-            &:before {
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 0;
-                padding-bottom: 18%;
-                bottom: 90%;
-                content: '';
-                z-index: 0;
-                background: url('/images/header-modal-1.png') no-repeat top center / cover;
-            }
+    .perfil__ranking {
+        @include mq(xs) {
+            margin-top: -60px;
+        }
+    }
 
-            p {
-                margin: 0;
-            }
+    .perfil__ranking__table-title.-white {
+        @include mq(xs) {
+            font-size: 24px;
+        }
+    }
 
-            i {
-                font-size: 28px;
-                margin-bottom: 15px;
-                color: $yellow;
-            }
+    .perfil__ranking__cell.-name {
+        @include mq(xs) {
+            width: 62%;
+        }
+    }
+
+    .perfil__ranking__cell.-score {
+        @include mq(xs) {
+            width: 16%;
+            font-size: 16px;
+        }
+    }
+
+    .perfil__ranking__message-content {
+        @include mq(xs) {
+            width: 90%;
         }
     }
 }
 
-@media (orientation: portrait) {
-    .perfil__blocked { display: flex; }
-    .perfil { display: none; }
-}
 @media (orientation: landscape) {
-    .perfil__blocked { display: none; }
-    .perfil { display: block; }
+    // .perfil__blocked { display: none; }
+    // .perfil { display: block; }
 }

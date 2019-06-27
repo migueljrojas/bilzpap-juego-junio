@@ -331,10 +331,13 @@
         left: 10px;
         height: 30px;
         border: 3px solid $white;
-        border-radius: 5px;
+        border-radius: 50px;
+        overflow: hidden;
 
         @include mq(md) {
-            display: none;
+            bottom: 30px;
+            left: auto;
+            right: 30px;
         }
     }
 
@@ -367,7 +370,9 @@
 
     &.-perfil {
         .header--game__icon-group--score,
-        .header--game__icon-group--time {
+        .header--game__icon-group--time,
+        .header--game__buttons,
+        .header--game__logo-title {
             display: none;
         }
     }
