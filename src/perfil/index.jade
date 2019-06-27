@@ -5,4 +5,127 @@ block config
   - var baseUrl = '../';
 
 block content
-  p perfil page
+    main.perfil
+        section.perfil__hero
+            .container
+                .row
+                    .col-24
+                        .perfil__hero__container
+                            .perfil__hero__wrapper
+                                .perfil__hero__avatar
+                                    img(src="/images/avatar-big.png")
+                                .perfil__hero__group
+                                    h3.perfil__hero__title hola,
+                                    p.perfil__hero__text seba
+                            .perfil__hero__wrapper
+                                .perfil__hero__group
+                                    h3.perfil__hero__title puntaje máximo
+                                    .perfil__hero__group-wrapper
+                                        span.perfil__hero__number 18960
+                                        .perfil__hero__icon
+                                            img(src="/images/icon-coin-mono.png")
+                                .perfil__hero__group
+                                    h3.perfil__hero__title ranking máximo
+                                    .perfil__hero__group-wrapper
+                                        span.perfil__hero__number 42
+                                        .perfil__hero__icon
+                                            img(src="/images/icon-trophy.png")
+
+        section.perfil__ranking
+            .container
+                .row
+                    .col-24.col-md-16
+                        .perfil__ranking__table
+                            p.perfil__ranking__table-title.-white ranking del mes del niño
+                            .perfil__ranking__table-heading
+                                p.perfil__ranking__heading-title.-index puesto
+                                p.perfil__ranking__heading-title.-avatar avatar
+                                p.perfil__ranking__heading-title.-name alias
+                                p.perfil__ranking__heading-title.-score puntos
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-first-index.-index 1
+                                .perfil__ranking__cell.-first-index.-avatar
+                                    img(src="/images/avatar-1.png")
+                                .perfil__ranking__cell.-first-index.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-first-index.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 2
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-2.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 3
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-1.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 4
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-2.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 5
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-1.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 6
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-2.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 7
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-1.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 8
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-2.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 9
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-1.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                            .perfil__ranking__table-group.wow.fadeInLeft
+                                span.perfil__ranking__cell.-index 10
+                                .perfil__ranking__cell.-avatar
+                                    img(src="/images/avatar-2.png")
+                                .perfil__ranking__cell.-name
+                                    p nombre del usuario
+                                .perfil__ranking__cell.-score
+                                    span 1500
+                    .col-24.col-md-8            
+                        .perfil__ranking__container
+                            .perfil__ranking__message-image
+                                img(src="/images/profile-message.png")
+                            .perfil__ranking__message-content
+                                h2.perfil__ranking__message ¡sigue jugando con nosotros y no olvides guardar tu puntaje para subir en el ranking!
+                                a.perfil__ranking__button(href="/juego") ¡a jugar!
