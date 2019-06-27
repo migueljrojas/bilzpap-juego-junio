@@ -18,7 +18,9 @@
         left: 0;
         
         &.-active {
-            transform: translateX(0);
+            @include mq(xs) {
+                transform: translateX(0);
+            }
         }
 
         &__close {
